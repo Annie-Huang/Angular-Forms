@@ -1,0 +1,11 @@
+D:\react>ng new  Angular-Forms
+? Would you like to add Angular routing? No
+? Which stylesheet format would you like to use? CSS
+
+D:\react\Angular-Forms>git remote add origin git@github.com:Annie-Huang/Angular-Forms.git
+D:\react\Angular-Forms>git push -u origin master
+
+
+
+
+
