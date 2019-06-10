@@ -1,4 +1,6 @@
 https://getbootstrap.com/docs/4.0/components/forms/
+https://angular.io/api/forms/NgForm
+
 
 D:\react>ng new  Angular-Forms
 ? Would you like to add Angular routing? No
