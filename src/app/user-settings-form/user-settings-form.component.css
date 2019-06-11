@@ -1,0 +1,5 @@
+
+/*cannot have space between the two classes below*/
+.ng-invalid:not(form).ng-touched {
+  border: 1px solid red;
+}
