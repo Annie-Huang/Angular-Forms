@@ -6,7 +6,9 @@
       <label for="name">Name</label>
 <!--      <input id="name" name="name" class="form-control" ngModel>-->
       <!-- two way binding so the intial value to get into the form as well -->
-      <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name">
+<!--      <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name" pattern="B.*" minlength="3">-->
+<!--      <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name" type="number" min="3" max="300">-->
+      <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name" required>
     </div>
 
     <div class="form-check form-group">

@@ -12,4 +12,14 @@ D:\react\Angular-Forms>git push -u origin master
 D:\react\Angular-Forms>ng g c user-settings-form
 D:\react\Angular-Forms>npm install --save bootstrap
 
+blur
+=========
+ng-untouched | ng-touched
 
+unmodified
+==============
+ng-pristine | ng-dirty
+
+validation
+================
+ng-valid | ng-invalid
