@@ -16,6 +16,7 @@ export class UserSettingsFormComponent implements OnInit {
     notes: 'here are some notes...'
   };
 
+  // deep copy can be done through lodash's deep copy function
   userSettings: UserSettings = {...this.originalUserSettings};
 
   constructor() { }
