@@ -23,3 +23,43 @@ ng-pristine | ng-dirty
 validation
 ================
 ng-valid | ng-invalid
+
+-----------
+
+
+<input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name" #classTest>
+<h3>{{ classTest.className }}</h3>
+
+For required, it will apply these classes:
+ng-untouched ng-pristine ng-invalid
+
+When you tab in and out of the field:
+ng-pristine ng-invalid ng-touched
+
+Refresh the page When you tab in and type something:
+ng-dirty ng-valid ng-touched
+
+Remove required and refresh the page:
+ng-untouched ng-pristine ng-valid
+
+-----------
+<input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name" minlength="3" #classTest>
+<h3>{{ classTest.className }}</h3>
+
+Initially:
+ng-untouched ng-pristine ng-valid	<< don't know why it's ng-valid
+
+Start typing "M"
+ng-untouched ng-dirty ng-invalid
+
+Continue to type "ac"
+ng-untouched ng-dirty ng-valid
+
+-----------
+<input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name" required minlength="3" #classTest>
+<h3>{{ classTest.className }}</h3>
+
+Initially:
+ng-untouched ng-pristine ng-invalid
+
+
