@@ -27,6 +27,8 @@ export class UserSettingsFormComponent implements OnInit {
 
   // deep copy can be done through lodash's deep copy function
   userSettings: UserSettings = {...this.originalUserSettings};
+  postError = false;
+  postErrorMessage = '';
 
   constructor(private dataService: DataService) { }
 
@@ -37,11 +39,18 @@ export class UserSettingsFormComponent implements OnInit {
     console.log('in onBlur: ', field.valid);
   }
 
+  onHttpError(errorResponse: any) {
+    console.log('error: ', errorResponse);
+    this.postError = true;
+    this.postErrorMessage = errorResponse.error.errorMessage;
+    console.log('postErrorMessage=', this.postErrorMessage);
+  }
+
   onSubmit(form: NgForm) {
     console.log('in onSubmit:', form.valid);
     this.dataService.postUserSettingsForm(this.userSettings).subscribe(
       result => console.log('success: ', result),
-      error => console.log('error: ', error)
+      error => this.onHttpError(error)
     );
   }
 }

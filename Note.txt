@@ -68,3 +68,7 @@ ng-untouched ng-pristine ng-invalid
 What's put into https://putsreq.com/osNqx9elMrKHmaSiXTtQ/inspect
 var parsedBody = JSON.parse(request.body);
 response.body = parsedBody;
+
+response.status = 400;
+response.body = {errorMessage: 'Some error goes here..'};
+
