@@ -26,6 +26,8 @@ export class UserSettingsFormComponent implements OnInit {
     notes: null
   };
 
+  singleModel = 'On';
+
   // deep copy can be done through lodash's deep copy function
   userSettings: UserSettings = {...this.originalUserSettings};
   postError = false;
