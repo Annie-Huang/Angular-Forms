@@ -1,5 +1,7 @@
 https://getbootstrap.com/docs/4.0/components/forms/
 https://angular.io/api/forms/NgForm
+https://putsreq.com/
+https://github.com/phstc/putsreq#response-builder
 
 
 D:\react>ng new  Angular-Forms
@@ -62,4 +64,7 @@ ng-untouched ng-dirty ng-valid
 Initially:
 ng-untouched ng-pristine ng-invalid
 
-
+------------
+What's put into https://putsreq.com/osNqx9elMrKHmaSiXTtQ/inspect
+var parsedBody = JSON.parse(request.body);
+response.body = parsedBody;
