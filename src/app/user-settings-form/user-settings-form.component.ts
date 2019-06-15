@@ -29,6 +29,8 @@ export class UserSettingsFormComponent implements OnInit {
   singleModel = 'On';
   startDate: Date;
   startTime: Date;
+  userRating = 0;
+  maxRating = 10;
   // deep copy can be done through lodash's deep copy function
   userSettings: UserSettings = {...this.originalUserSettings};
   postError = false;
