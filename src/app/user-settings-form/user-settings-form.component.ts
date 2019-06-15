@@ -27,7 +27,7 @@ export class UserSettingsFormComponent implements OnInit {
   };
 
   singleModel = 'On';
-
+  startDate: Date;
   // deep copy can be done through lodash's deep copy function
   userSettings: UserSettings = {...this.originalUserSettings};
   postError = false;
@@ -38,6 +38,8 @@ export class UserSettingsFormComponent implements OnInit {
 
   ngOnInit() {
     this.subscriptionTypes =  this.dataService.getSubscriptionTypes();
+
+    this.startDate = new Date();
   }
 
   onBlur(field: NgModel) {

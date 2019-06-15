@@ -46,6 +46,16 @@
       {{singleModel}}
     </button>
 
+    <div class="form-group">
+      <label for="startDate">Start Date</label>
+      <input type="text"
+             placeholder="Start Date"
+             class="form-control"
+             [(ngModel)]="startDate" name="startDate" id="startDate"
+             bsDatepicker>
+    </div>
+
+    Start Date: {{startDate}}
 
     <div class="form-check form-group">
       <input class="form-check-input" type="checkbox" value="" id="emailOffers" name="emailOffers" [(ngModel)]="userSettings.emailOffers">
