@@ -4,6 +4,7 @@ https://putsreq.com/
 https://github.com/phstc/putsreq#response-builder
 https://valor-software.com/ngx-bootstrap/#/buttons
 https://valor-software.com/ngx-bootstrap/#/datepicker
+https://valor-software.com/ngx-bootstrap/#/timepicker
 
 https://angular.io/resources
 (under community: Catalog of Angular Components & libaries)
