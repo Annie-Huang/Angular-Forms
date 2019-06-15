@@ -39,7 +39,6 @@
 
         <h3>valid: {{ nameField.valid }}</h3>
 
-
     <button type="button" class="btn btn-primary" name="singleModel"
             [(ngModel)]="singleModel" btnCheckbox
             btnCheckboxTrue="On" btnCheckboxFalse="Off">
@@ -62,7 +61,15 @@
              [(ngModel)]="startDate" name="startDate" id="startDate"
              bsDaterangepicker>
     </div>
+
     Start Date: {{startDate}}
+
+    <div class="form-group">
+      <label for="startTime">Start Time</label>
+      <timepicker [(ngModel)]="startTime" name="startTime" id="startTime"></timepicker>
+    </div>
+
+    Start Time {{startTime}}
 
     <div class="form-check form-group">
       <input class="form-check-input" type="checkbox" value="" id="emailOffers" name="emailOffers" [(ngModel)]="userSettings.emailOffers">
