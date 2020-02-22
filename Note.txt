@@ -1,3 +1,5 @@
+https://github.com/Annie-Huang/Angular-Forms
+
 https://getbootstrap.com/docs/4.0/components/forms/
 https://getbootstrap.com/docs/4.0/components/forms/#checkboxes-and-radios
 https://getbootstrap.com/docs/4.0/components/forms/#form-controls
@@ -5,14 +7,20 @@ https://getbootstrap.com/docs/4.0/components/forms/#form-controls
 https://angular.io/api/forms/NgForm
 https://putsreq.com/
 https://github.com/phstc/putsreq#response-builder
-https://valor-software.com/ngx-bootstrap/#/buttons
-https://valor-software.com/ngx-bootstrap/#/datepicker
-https://valor-software.com/ngx-bootstrap/#/timepicker
-https://valor-software.com/ngx-bootstrap/#/rating
 
 https://angular.io/resources
 (under community: Catalog of Angular Components & libaries)
 https://github.com/brillout/awesome-angular-components
+
+https://valor-software.com/ngx-bootstrap/#/
+https://valor-software.com/ngx-bootstrap/#/documentation#getting-started
+https://valor-software.com/ngx-bootstrap/#/buttons#custom-checkbox-value
+https://valor-software.com/ngx-bootstrap/#/buttons#radio-button
+https://valor-software.com/ngx-bootstrap/#/datepicker#basic
+https://valor-software.com/ngx-bootstrap/#/timepicker#basic
+https://valor-software.com/ngx-bootstrap/#/rating#rating-dynamic
+
+===========================================================================
 
 D:\react>ng new  Angular-Forms
 ? Would you like to add Angular routing? No
@@ -23,6 +31,14 @@ D:\react\Angular-Forms>git push -u origin master
 
 D:\react\Angular-Forms>ng g c user-settings-form
 D:\react\Angular-Forms>npm install --save bootstrap
+
+
+I installed the whole ngx-boostrap library but you can do it one by one, e.g.
+ng add ngx-bootstrap  --component buttons
+ng add ngx-bootstrap  --component datepicker
+ng add ngx-bootstrap  --component timepicker
+ng add ngx-bootstrap  --component rating
+
 
 blur (tab|mouseClick in and out of the field)
 ======================================
