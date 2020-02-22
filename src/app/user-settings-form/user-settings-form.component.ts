@@ -35,6 +35,7 @@ export class UserSettingsFormComponent implements OnInit {
   userSettings: UserSettings = {...this.originalUserSettings};
   postError = false;
   postErrorMessage = '';
+  // subscriptionTypes = ['one', 'two', 'three'];
   subscriptionTypes: Observable<string[]>;
 
   constructor(private dataService: DataService) { }
@@ -62,14 +63,19 @@ export class UserSettingsFormComponent implements OnInit {
     console.log('in onSubmit:', form.valid);
     // console.log('in onSubmit:', form.value);
 
-    // if (form.valid) {
-    //   this.dataService.postUserSettingsForm(this.userSettings).subscribe(
-    //     result => console.log('success: ', result),
-    //     error => this.onHttpError(error)
-    //   );
-    // } else {
-    //   this.postError = true;
-    //   this.postErrorMessage = 'Please fix the above errors';
-    // }
+    // this.dataService.postUserSettingsForm(this.userSettings).subscribe(
+    //   result => console.log('success: ', result),
+    //   error => this.onHttpError(error)
+    // );
+
+    if (form.valid) {
+      this.dataService.postUserSettingsForm(this.userSettings).subscribe(
+        result => console.log('success: ', result),
+        error => this.onHttpError(error)
+      );
+    } else {
+      this.postError = true;
+      this.postErrorMessage = 'Please fix the above errors';
+    }
   }
 }

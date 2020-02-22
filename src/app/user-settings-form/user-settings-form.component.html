@@ -239,9 +239,9 @@
 
 
 
-<br><br><br>
-<hr><hr><hr>
-<br><br><br>
+<!--<br><br><br>-->
+<!--<hr><hr><hr>-->
+<!--<br><br><br>-->
 
 <!-- Get errors as soon as you tab out of the field and if the field is not valid. -->
 <!--<form #form="ngForm" ngNativeValidate>-->
@@ -344,6 +344,243 @@
 
 
 
+<!--&lt;!&ndash; Get errors on submit and if some of the fields are not valid.-->
+<!--     The name, 'form', in 'onSubmit(form)' need to match '#form'-->
+<!--&ndash;&gt;-->
+<!--<form #form="ngForm" (ngSubmit)="onSubmit(form)">-->
+<!--  &lt;!&ndash;  <div class="form-group">&ndash;&gt;-->
+<!--  &lt;!&ndash;    <label for="name">Name</label>&ndash;&gt;-->
+<!--  &lt;!&ndash;    <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name" required #classTest>&ndash;&gt;-->
+<!--  &lt;!&ndash;    <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name" pattern="B.*" >&ndash;&gt;-->
+<!--  &lt;!&ndash;    <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name" minlength="3" #classTest>&ndash;&gt;-->
+<!--  &lt;!&ndash;    <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name" maxlength="3" >&ndash;&gt;-->
+<!--  &lt;!&ndash;    <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name" type="number" min="3" max="300">&ndash;&gt;-->
+<!--  &lt;!&ndash;    <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name" required  #propertyTest="ngModel">&ndash;&gt;-->
+<!--  &lt;!&ndash;  </div>&ndash;&gt;-->
+
+<!--  &lt;!&ndash; The following is used for showing ng-untouched | ng-touched | ng-pristine | ng-dirty | ng-valid | ng-invalid &ndash;&gt;-->
+<!--  &lt;!&ndash;  <h3>{{ classTest.className }}</h3>&ndash;&gt;-->
+
+<!--  &lt;!&ndash;    <h3>dirty: {{ propertyTest.dirty }}</h3>&ndash;&gt;-->
+<!--  &lt;!&ndash;    <h3>pristine: {{ propertyTest.pristine }}</h3>&ndash;&gt;-->
+<!--  &lt;!&ndash;    <h3>touched: {{ propertyTest.touched }}</h3>&ndash;&gt;-->
+<!--  &lt;!&ndash;    <h3>untouched: {{ propertyTest.untouched }}</h3>&ndash;&gt;-->
+<!--  &lt;!&ndash;    <h3>valid: {{ propertyTest.valid }}</h3>&ndash;&gt;-->
+<!--  &lt;!&ndash;    <h3>invalid: {{ propertyTest.invalid }}</h3>&ndash;&gt;-->
+
+
+<!--  <div class="form-group">-->
+<!--    <label for="name">Name</label>-->
+
+<!--&lt;!&ndash;    <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name" required  #nameField="ngModel">&ndash;&gt;-->
+<!--&lt;!&ndash;    <div [hidden]="nameField.valid || nameField.untouched" class="alert alert-danger">Enter a name</div>&ndash;&gt;-->
+
+<!--    <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name"-->
+<!--           required  #nameField="ngModel"-->
+<!--           (blur)="onBlur(nameField)"-->
+<!--           [class.field-error]="form.submitted && nameField.invalid">-->
+<!--    <div [hidden]="!form.submitted || nameField.valid" class="alert alert-danger">Enter a name</div>-->
+
+<!--  </div>-->
+
+
+
+
+<!--  <div class="form-check form-group">-->
+<!--    <input class="form-check-input" type="checkbox" id="emailOffers" name="emailOffers" [(ngModel)]="userSettings.emailOffers">-->
+<!--    <label class="form-check-label" for="emailOffers">-->
+<!--      Email Special Offers-->
+<!--    </label>-->
+<!--  </div>-->
+
+<!--  <p>User Interface Style</p>-->
+<!--  <div class="form-group">-->
+<!--    <div class="form-check">-->
+<!--      <input class="form-check-input" type="radio" name="interfaceStyle" id="lightInterface" value="light" checked [(ngModel)]="userSettings.interfaceStyle">-->
+<!--      <label class="form-check-label" for="lightInterface">-->
+<!--        Light-->
+<!--      </label>-->
+<!--    </div>-->
+<!--    <div class="form-check">-->
+<!--      <input class="form-check-input" type="radio" name="interfaceStyle" id="mediumInterface" value="medium" [(ngModel)]="userSettings.interfaceStyle">-->
+<!--      <label class="form-check-label" for="mediumInterface">-->
+<!--        Medium-->
+<!--      </label>-->
+<!--    </div>-->
+<!--    <div class="form-check disabled">-->
+<!--      <input class="form-check-input" type="radio" name="interfaceStyle" id="darkInterface" value="dark" [(ngModel)]="userSettings.interfaceStyle">-->
+<!--      <label class="form-check-label" for="darkInterface">-->
+<!--        Dark-->
+<!--      </label>-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--  <div class="form-group">-->
+<!--    <label for="subscriptionType">Subscription Type</label>-->
+<!--    <select class="form-control" id="subscriptionType" [(ngModel)]="userSettings.subscriptionType" name="subscriptionType"> &lt;!&ndash; Need to have a name, otherwise it doesn't know the property to link to.&ndash;&gt;-->
+<!--      <option>Monthly</option>-->
+<!--      <option>Annual</option>-->
+<!--      <option>Lifetime</option>-->
+<!--    </select>-->
+<!--  </div>-->
+
+<!--  <div class="form-group">-->
+<!--    <label for="notes">Notes</label>-->
+<!--    <textarea class="form-control" id="notes" name="notes" rows="3" [(ngModel)]="userSettings.notes"></textarea>-->
+<!--  </div>-->
+
+<!--  <div class="form-group">-->
+<!--    <label for="password">Password</label>-->
+<!--    <input type="password" id="password" name="password" class="form-control" ngModel>-->
+<!--  </div>-->
+
+<!--  &lt;!&ndash; Different browser has their own implementation of input:date, so look and feel maynot be consistent &ndash;&gt;-->
+<!--  <div class="form-group">-->
+<!--    <label for="testing">Testing</label>-->
+<!--    <input type="date" id="testing" name="testing" class="form-control" ngModel>-->
+<!--    &lt;!&ndash;    <input type="color" id="testing" name="testing" class="form-control" ngModel>&ndash;&gt;-->
+<!--  </div>-->
+
+<!--  <button class="btn btn-primary">Send</button>-->
+<!--</form>-->
+
+<!--&lt;!&ndash;{{ form | json}}&ndash;&gt;-->
+<!--&lt;!&ndash;<h3>{{ form.value | json}}</h3>&ndash;&gt;-->
+<!--<h3>userSettings: {{userSettings | json}}</h3>-->
+<!--<h3>originalUserSettings: {{originalUserSettings | json}}</h3>-->
+
+
+
+
+
+
+
+
+<!-- ######################################################################### -->
+<!-- ######################################################################### -->
+
+
+
+
+
+
+<!-- Get errors on submit and if some of the fields are not valid.
+     The name, 'form', in 'onSubmit(form)' need to match '#form'
+-->
+<!--<form #form="ngForm" (ngSubmit)="onSubmit(form)">-->
+<!--  &lt;!&ndash;  <div class="form-group">&ndash;&gt;-->
+<!--  &lt;!&ndash;    <label for="name">Name</label>&ndash;&gt;-->
+<!--  &lt;!&ndash;    <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name" required #classTest>&ndash;&gt;-->
+<!--  &lt;!&ndash;    <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name" pattern="B.*" >&ndash;&gt;-->
+<!--  &lt;!&ndash;    <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name" minlength="3" #classTest>&ndash;&gt;-->
+<!--  &lt;!&ndash;    <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name" maxlength="3" >&ndash;&gt;-->
+<!--  &lt;!&ndash;    <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name" type="number" min="3" max="300">&ndash;&gt;-->
+<!--  &lt;!&ndash;    <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name" required  #propertyTest="ngModel">&ndash;&gt;-->
+<!--  &lt;!&ndash;  </div>&ndash;&gt;-->
+
+<!--  &lt;!&ndash; The following is used for showing ng-untouched | ng-touched | ng-pristine | ng-dirty | ng-valid | ng-invalid &ndash;&gt;-->
+<!--  &lt;!&ndash;  <h3>{{ classTest.className }}</h3>&ndash;&gt;-->
+
+<!--  &lt;!&ndash;    <h3>dirty: {{ propertyTest.dirty }}</h3>&ndash;&gt;-->
+<!--  &lt;!&ndash;    <h3>pristine: {{ propertyTest.pristine }}</h3>&ndash;&gt;-->
+<!--  &lt;!&ndash;    <h3>touched: {{ propertyTest.touched }}</h3>&ndash;&gt;-->
+<!--  &lt;!&ndash;    <h3>untouched: {{ propertyTest.untouched }}</h3>&ndash;&gt;-->
+<!--  &lt;!&ndash;    <h3>valid: {{ propertyTest.valid }}</h3>&ndash;&gt;-->
+<!--  &lt;!&ndash;    <h3>invalid: {{ propertyTest.invalid }}</h3>&ndash;&gt;-->
+
+
+<!--  <div class="form-group">-->
+<!--    <label for="name">Name</label>-->
+
+<!--    &lt;!&ndash;    <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name" required  #nameField="ngModel">&ndash;&gt;-->
+<!--    &lt;!&ndash;    <div [hidden]="nameField.valid || nameField.untouched" class="alert alert-danger">Enter a name</div>&ndash;&gt;-->
+
+<!--    <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name"-->
+<!--           required  #nameField="ngModel"-->
+<!--           (blur)="onBlur(nameField)"-->
+<!--           [class.field-error]="form.submitted && nameField.invalid">-->
+<!--    <div [hidden]="!form.submitted || nameField.valid" class="alert alert-danger">Enter a name</div>-->
+
+<!--  </div>-->
+
+
+
+
+<!--  <div class="form-check form-group">-->
+<!--    <input class="form-check-input" type="checkbox" id="emailOffers" name="emailOffers" [(ngModel)]="userSettings.emailOffers">-->
+<!--    <label class="form-check-label" for="emailOffers">-->
+<!--      Email Special Offers-->
+<!--    </label>-->
+<!--  </div>-->
+
+<!--  <p>User Interface Style</p>-->
+<!--  <div class="form-group">-->
+<!--    <div class="form-check">-->
+<!--      <input class="form-check-input" type="radio" name="interfaceStyle" id="lightInterface" value="light" checked [(ngModel)]="userSettings.interfaceStyle">-->
+<!--      <label class="form-check-label" for="lightInterface">-->
+<!--        Light-->
+<!--      </label>-->
+<!--    </div>-->
+<!--    <div class="form-check">-->
+<!--      <input class="form-check-input" type="radio" name="interfaceStyle" id="mediumInterface" value="medium" [(ngModel)]="userSettings.interfaceStyle">-->
+<!--      <label class="form-check-label" for="mediumInterface">-->
+<!--        Medium-->
+<!--      </label>-->
+<!--    </div>-->
+<!--    <div class="form-check disabled">-->
+<!--      <input class="form-check-input" type="radio" name="interfaceStyle" id="darkInterface" value="dark" [(ngModel)]="userSettings.interfaceStyle">-->
+<!--      <label class="form-check-label" for="darkInterface">-->
+<!--        Dark-->
+<!--      </label>-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--  <div class="form-group">-->
+<!--    <label for="subscriptionType">Subscription Type</label>-->
+<!--    <select class="form-control" id="subscriptionType" [(ngModel)]="userSettings.subscriptionType" name="subscriptionType"> &lt;!&ndash; Need to have a name, otherwise it doesn't know the property to link to.&ndash;&gt;-->
+<!--      <option>Monthly</option>-->
+<!--      <option>Annual</option>-->
+<!--      <option>Lifetime</option>-->
+<!--    </select>-->
+<!--  </div>-->
+
+<!--  <div class="form-group">-->
+<!--    <label for="notes">Notes</label>-->
+<!--    <textarea class="form-control" id="notes" name="notes" rows="3" [(ngModel)]="userSettings.notes"></textarea>-->
+<!--  </div>-->
+
+<!--  <div class="form-group">-->
+<!--    <label for="password">Password</label>-->
+<!--    <input type="password" id="password" name="password" class="form-control" ngModel>-->
+<!--  </div>-->
+
+<!--  &lt;!&ndash; Different browser has their own implementation of input:date, so look and feel maynot be consistent &ndash;&gt;-->
+<!--  <div class="form-group">-->
+<!--    <label for="testing">Testing</label>-->
+<!--    <input type="date" id="testing" name="testing" class="form-control" ngModel>-->
+<!--    &lt;!&ndash;    <input type="color" id="testing" name="testing" class="form-control" ngModel>&ndash;&gt;-->
+<!--  </div>-->
+
+<!--  <div [hidden]="!postError" class="alert alert-danger">-->
+<!--    {{postErrorMessage}}-->
+<!--  </div>-->
+
+<!--  <button class="btn btn-primary">Send</button>-->
+<!--</form>-->
+
+<!--&lt;!&ndash;{{ form | json}}&ndash;&gt;-->
+<!--&lt;!&ndash;<h3>{{ form.value | json}}</h3>&ndash;&gt;-->
+<!--<h3>userSettings: {{userSettings | json}}</h3>-->
+<!--<h3>originalUserSettings: {{originalUserSettings | json}}</h3>-->
+
+
+
+
+<!-- ######################################################################### -->
+
+
+
+
 <!-- Get errors on submit and if some of the fields are not valid.
      The name, 'form', in 'onSubmit(form)' need to match '#form'
 -->
@@ -372,8 +609,8 @@
   <div class="form-group">
     <label for="name">Name</label>
 
-<!--    <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name" required  #nameField="ngModel">-->
-<!--    <div [hidden]="nameField.valid || nameField.untouched" class="alert alert-danger">Enter a name</div>-->
+    <!--    <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name" required  #nameField="ngModel">-->
+    <!--    <div [hidden]="nameField.valid || nameField.untouched" class="alert alert-danger">Enter a name</div>-->
 
     <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name"
            required  #nameField="ngModel"
@@ -418,9 +655,14 @@
   <div class="form-group">
     <label for="subscriptionType">Subscription Type</label>
     <select class="form-control" id="subscriptionType" [(ngModel)]="userSettings.subscriptionType" name="subscriptionType"> <!-- Need to have a name, otherwise it doesn't know the property to link to.-->
-      <option>Monthly</option>
-      <option>Annual</option>
-      <option>Lifetime</option>
+<!--      <option>Monthly</option>-->
+<!--      <option>Annual</option>-->
+<!--      <option>Lifetime</option>-->
+
+<!--      <option *ngFor="let type of subscriptionTypes">-->
+      <option *ngFor="let type of subscriptionTypes | async">
+        {{type}}
+      </option>
     </select>
   </div>
 
@@ -441,6 +683,10 @@
     <!--    <input type="color" id="testing" name="testing" class="form-control" ngModel>-->
   </div>
 
+  <div [hidden]="!postError" class="alert alert-danger">
+    {{postErrorMessage}}
+  </div>
+
   <button class="btn btn-primary">Send</button>
 </form>
 
@@ -450,19 +696,11 @@
 <h3>originalUserSettings: {{originalUserSettings | json}}</h3>
 
 
-
-
-
-
-
-
 <!-- ######################################################################### -->
 <!-- ######################################################################### -->
 
 
-
-
-
+<!-- 1st time syntax, the above are all 2nd time syntax... -->
 <br><br><br>
 <hr><hr><hr>
 <br><br><br>

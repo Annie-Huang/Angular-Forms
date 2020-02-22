@@ -91,9 +91,17 @@ Initially:
 ng-untouched ng-pristine ng-invalid
 
 ------------
-What's put into https://putsreq.com/osNqx9elMrKHmaSiXTtQ/inspect
+
+What's put into https://putsreq.com/osNqx9elMrKHmaSiXTtQ/inspect, or https://putsreq.com/osNqx9elMrKHmaSiXTtQ:
+Success:
 var parsedBody = JSON.parse(request.body);
+parsedBody.id = '1234';
 response.body = parsedBody;
 
+Error:
 response.status = 400;
 response.body = {errorMessage: 'Some error goes here..'};
+
+
+400 error: errors in the client side (invalid fields?).
+500 error: errors in the server side.
