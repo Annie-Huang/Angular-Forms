@@ -1,4 +1,7 @@
 https://getbootstrap.com/docs/4.0/components/forms/
+https://getbootstrap.com/docs/4.0/components/forms/#checkboxes-and-radios
+https://getbootstrap.com/docs/4.0/components/forms/#form-controls
+
 https://angular.io/api/forms/NgForm
 https://putsreq.com/
 https://github.com/phstc/putsreq#response-builder
