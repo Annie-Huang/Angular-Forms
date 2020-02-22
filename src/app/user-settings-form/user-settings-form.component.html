@@ -4,14 +4,157 @@
 <!--</form>-->
 
 <!-- ######################################################################### -->
-<form>
+<!-- ######################################################################### -->
+
+<!--<form>-->
+<!--  <div class="form-group">-->
+<!--    <label for="name">Name</label>-->
+<!--    <input id="name" name="name" class="form-control">-->
+<!--  </div>-->
+
+<!--  <div class="form-check form-group">-->
+<!--    <input class="form-check-input" type="checkbox" id="emailOffers" name="emailOffers">-->
+<!--    <label class="form-check-label" for="emailOffers">-->
+<!--      Email Special Offers-->
+<!--    </label>-->
+<!--  </div>-->
+
+<!--  <p>User Interface Style</p>-->
+<!--  <div class="form-group">-->
+<!--    <div class="form-check">-->
+<!--      <input class="form-check-input" type="radio" name="interfaceStyle" id="lightInterface" value="light" checked>-->
+<!--      <label class="form-check-label" for="lightInterface">-->
+<!--        Light-->
+<!--      </label>-->
+<!--    </div>-->
+<!--    <div class="form-check">-->
+<!--      <input class="form-check-input" type="radio" name="interfaceStyle" id="mediumInterface" value="medium">-->
+<!--      <label class="form-check-label" for="mediumInterface">-->
+<!--        Medium-->
+<!--      </label>-->
+<!--    </div>-->
+<!--    <div class="form-check disabled">-->
+<!--      <input class="form-check-input" type="radio" name="interfaceStyle" id="darkInterface" value="dark">-->
+<!--      <label class="form-check-label" for="darkInterface">-->
+<!--        Dark-->
+<!--      </label>-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--  <div class="form-group">-->
+<!--    <label for="subscriptionType">Subscription Type</label>-->
+<!--    <select class="form-control" id="subscriptionType">-->
+<!--      <option>Monthly</option>-->
+<!--      <option>Annual</option>-->
+<!--      <option>Lifetime</option>-->
+<!--    </select>-->
+<!--  </div>-->
+
+<!--  <div class="form-group">-->
+<!--    <label for="notes">Notes</label>-->
+<!--    <textarea class="form-control" id="notes" name="notes" rows="3"></textarea>-->
+<!--  </div>-->
+
+<!--  <div class="form-group">-->
+<!--    <label for="password">Password</label>-->
+<!--    <input type="password" id="password" name="password" class="form-control">-->
+<!--  </div>-->
+
+<!--  &lt;!&ndash; Different browser has their own implementation of input:date, so look and feel maynot be consistent &ndash;&gt;-->
+<!--  <div class="form-group">-->
+<!--    <label for="testing">Testing</label>-->
+<!--&lt;!&ndash;    <input type="date" id="testing" name="testing" class="form-control">&ndash;&gt;-->
+<!--    <input type="color" id="testing" name="testing" class="form-control">-->
+<!--  </div>-->
+
+<!--  <button class="btn btn-primary">Send</button>-->
+<!--</form>-->
+
+<!-- ######################################################################### -->
+<!-- ######################################################################### -->
+
+<br><br><br>
+<hr><hr><hr>
+<br><br><br>
+
+<!--<form #form="ngForm">-->
+<!--  <div class="form-group">-->
+<!--    <label for="name">Name</label>-->
+<!--    <input id="name" name="name" class="form-control" ngModel>-->
+<!--  </div>-->
+
+<!--  <div class="form-check form-group">-->
+<!--    <input class="form-check-input" type="checkbox" id="emailOffers" name="emailOffers" ngModel>-->
+<!--    <label class="form-check-label" for="emailOffers">-->
+<!--      Email Special Offers-->
+<!--    </label>-->
+<!--  </div>-->
+
+<!--  <p>User Interface Style</p>-->
+<!--  <div class="form-group">-->
+<!--    <div class="form-check">-->
+<!--      <input class="form-check-input" type="radio" name="interfaceStyle" id="lightInterface" value="light" checked ngModel>-->
+<!--      <label class="form-check-label" for="lightInterface">-->
+<!--        Light-->
+<!--      </label>-->
+<!--    </div>-->
+<!--    <div class="form-check">-->
+<!--      <input class="form-check-input" type="radio" name="interfaceStyle" id="mediumInterface" value="medium" ngModel>-->
+<!--      <label class="form-check-label" for="mediumInterface">-->
+<!--        Medium-->
+<!--      </label>-->
+<!--    </div>-->
+<!--    <div class="form-check disabled">-->
+<!--      <input class="form-check-input" type="radio" name="interfaceStyle" id="darkInterface" value="dark" ngModel>-->
+<!--      <label class="form-check-label" for="darkInterface">-->
+<!--        Dark-->
+<!--      </label>-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--  <div class="form-group">-->
+<!--    <label for="subscriptionType">Subscription Type</label>-->
+<!--    <select class="form-control" id="subscriptionType" ngModel name="subscriptionType"> &lt;!&ndash; Need to have a name, otherwise it doesn't know the property to link to.&ndash;&gt;-->
+<!--      <option>Monthly</option>-->
+<!--      <option>Annual</option>-->
+<!--      <option>Lifetime</option>-->
+<!--    </select>-->
+<!--  </div>-->
+
+<!--  <div class="form-group">-->
+<!--    <label for="notes">Notes</label>-->
+<!--    <textarea class="form-control" id="notes" name="notes" rows="3" ngModel></textarea>-->
+<!--  </div>-->
+
+<!--  <div class="form-group">-->
+<!--    <label for="password">Password</label>-->
+<!--    <input type="password" id="password" name="password" class="form-control" ngModel>-->
+<!--  </div>-->
+
+<!--  &lt;!&ndash; Different browser has their own implementation of input:date, so look and feel maynot be consistent &ndash;&gt;-->
+<!--  <div class="form-group">-->
+<!--    <label for="testing">Testing</label>-->
+<!--        <input type="date" id="testing" name="testing" class="form-control" ngModel>-->
+<!--&lt;!&ndash;    <input type="color" id="testing" name="testing" class="form-control" ngModel>&ndash;&gt;-->
+<!--  </div>-->
+
+<!--  <button class="btn btn-primary">Send</button>-->
+<!--</form>-->
+
+<!--&lt;!&ndash;{{ form | json}}&ndash;&gt;-->
+<!--<h3>{{ form.value | json}}</h3>-->
+
+
+<!-- ######################################################################### -->
+
+<form #form="ngForm">
   <div class="form-group">
     <label for="name">Name</label>
-    <input id="name" name="name" class="form-control">
+    <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name">
   </div>
 
   <div class="form-check form-group">
-    <input class="form-check-input" type="checkbox" id="emailOffers" name="emailOffers">
+    <input class="form-check-input" type="checkbox" id="emailOffers" name="emailOffers" [(ngModel)]="userSettings.emailOffers">
     <label class="form-check-label" for="emailOffers">
       Email Special Offers
     </label>
@@ -20,19 +163,19 @@
   <p>User Interface Style</p>
   <div class="form-group">
     <div class="form-check">
-      <input class="form-check-input" type="radio" name="interfaceStyle" id="lightInterface" value="light" checked>
+      <input class="form-check-input" type="radio" name="interfaceStyle" id="lightInterface" value="light" checked [(ngModel)]="userSettings.interfaceStyle">
       <label class="form-check-label" for="lightInterface">
         Light
       </label>
     </div>
     <div class="form-check">
-      <input class="form-check-input" type="radio" name="interfaceStyle" id="mediumInterface" value="medium">
+      <input class="form-check-input" type="radio" name="interfaceStyle" id="mediumInterface" value="medium" [(ngModel)]="userSettings.interfaceStyle">
       <label class="form-check-label" for="mediumInterface">
         Medium
       </label>
     </div>
     <div class="form-check disabled">
-      <input class="form-check-input" type="radio" name="interfaceStyle" id="darkInterface" value="dark">
+      <input class="form-check-input" type="radio" name="interfaceStyle" id="darkInterface" value="dark" [(ngModel)]="userSettings.interfaceStyle">
       <label class="form-check-label" for="darkInterface">
         Dark
       </label>
@@ -41,7 +184,7 @@
 
   <div class="form-group">
     <label for="subscriptionType">Subscription Type</label>
-    <select class="form-control" id="subscriptionType">
+    <select class="form-control" id="subscriptionType" [(ngModel)]="userSettings.subscriptionType" name="subscriptionType"> <!-- Need to have a name, otherwise it doesn't know the property to link to.-->
       <option>Monthly</option>
       <option>Annual</option>
       <option>Lifetime</option>
@@ -50,180 +193,185 @@
 
   <div class="form-group">
     <label for="notes">Notes</label>
-    <textarea class="form-control" id="notes" name="notes" rows="3"></textarea>
+    <textarea class="form-control" id="notes" name="notes" rows="3" [(ngModel)]="userSettings.notes"></textarea>
   </div>
 
   <div class="form-group">
     <label for="password">Password</label>
-    <input type="password" id="password" name="password" class="form-control">
+    <input type="password" id="password" name="password" class="form-control" ngModel>
   </div>
 
   <!-- Different browser has their own implementation of input:date, so look and feel maynot be consistent -->
   <div class="form-group">
     <label for="testing">Testing</label>
-<!--    <input type="date" id="testing" name="testing" class="form-control">-->
-    <input type="color" id="testing" name="testing" class="form-control">
+    <input type="date" id="testing" name="testing" class="form-control" ngModel>
+    <!--    <input type="color" id="testing" name="testing" class="form-control" ngModel>-->
   </div>
 
   <button class="btn btn-primary">Send</button>
 </form>
 
+<!--{{ form | json}}-->
+<!--<h3>{{ form.value | json}}</h3>-->
+<h3>userSettings: {{userSettings | json}}</h3>
+<h3>originalUserSettings: {{originalUserSettings | json}}</h3>
 
 
 
+<!-- ######################################################################### -->
 <!-- ######################################################################### -->
 
 <br><br><br>
 <hr><hr><hr>
 <br><br><br>
-<div class="container">
-  <h2>User Settings</h2>
-  <!-- ngNativeValidate allows the browser to validate each control -->
-<!--  <form #form="ngForm" ngNativeValidate>-->
+<!--<div class="container">-->
+<!--  <h2>User Settings</h2>-->
+<!--  &lt;!&ndash; ngNativeValidate allows the browser to validate each control &ndash;&gt;-->
+<!--&lt;!&ndash;  <form #form="ngForm" ngNativeValidate>&ndash;&gt;-->
 
-  <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+<!--  <form #form="ngForm" (ngSubmit)="onSubmit(form)">-->
 
-    <div class="form-group">
-      <label for="name">Name</label>
-<!--      <input id="name" name="name" class="form-control" placeholder="Name">-->
-<!--      <input id="name" name="name" class="form-control">-->
+<!--    <div class="form-group">-->
+<!--      <label for="name">Name</label>-->
+<!--&lt;!&ndash;      <input id="name" name="name" class="form-control" placeholder="Name">&ndash;&gt;-->
+<!--&lt;!&ndash;      <input id="name" name="name" class="form-control">&ndash;&gt;-->
 
-<!--      <input id="name" name="name" class="form-control" ngModel>-->
+<!--&lt;!&ndash;      <input id="name" name="name" class="form-control" ngModel>&ndash;&gt;-->
 
-      <!-- two way binding so the intial value to get into the form as well -->
-<!--      <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name">-->
+<!--      &lt;!&ndash; two way binding so the intial value to get into the form as well &ndash;&gt;-->
+<!--&lt;!&ndash;      <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name">&ndash;&gt;-->
 
-<!--      <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name" pattern="B.*" minlength="3">-->
-<!--      <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name" type="number" min="3" max="300">-->
+<!--&lt;!&ndash;      <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name" pattern="B.*" minlength="3">&ndash;&gt;-->
+<!--&lt;!&ndash;      <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name" type="number" min="3" max="300">&ndash;&gt;-->
 
-<!--      <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name" required #classTest>-->
-<!--      <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name" required #propertyTest="ngModel">-->
+<!--&lt;!&ndash;      <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name" required #classTest>&ndash;&gt;-->
+<!--&lt;!&ndash;      <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name" required #propertyTest="ngModel">&ndash;&gt;-->
 
-<!--      <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name" required #nameField="ngModel">-->
-<!--      <div [hidden]="nameField.valid || nameField.untouched" class="alert alert-danger">Enter a name</div>-->
+<!--&lt;!&ndash;      <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name" required #nameField="ngModel">&ndash;&gt;-->
+<!--&lt;!&ndash;      <div [hidden]="nameField.valid || nameField.untouched" class="alert alert-danger">Enter a name</div>&ndash;&gt;-->
 
-      <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name"
-             required #nameField="ngModel"
-             (blur)="onBlur(nameField)"
-             [class.field-error]="form.submitted && nameField.invalid">
-      <div [hidden]="!form.submitted || nameField.valid" class="alert alert-danger">Enter a name</div>
-    </div>
+<!--      <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name"-->
+<!--             required #nameField="ngModel"-->
+<!--             (blur)="onBlur(nameField)"-->
+<!--             [class.field-error]="form.submitted && nameField.invalid">-->
+<!--      <div [hidden]="!form.submitted || nameField.valid" class="alert alert-danger">Enter a name</div>-->
+<!--    </div>-->
 
-<!--    <h3>{{ classTest.className }}</h3>-->
+<!--&lt;!&ndash;    <h3>{{ classTest.className }}</h3>&ndash;&gt;-->
 
-<!--    <h3>dirty: {{ propertyTest.dirty }}</h3>-->
-<!--    <h3>pristine: {{ propertyTest.pristine }}</h3>-->
-<!--    <h3>touched: {{ propertyTest.touched }}</h3>-->
-<!--    <h3>untouched: {{ propertyTest.untouched }}</h3>-->
-<!--    <h3>valid: {{ propertyTest.valid }}</h3>-->
-<!--    <h3>invalid: {{ propertyTest.invalid }}</h3>-->
+<!--&lt;!&ndash;    <h3>dirty: {{ propertyTest.dirty }}</h3>&ndash;&gt;-->
+<!--&lt;!&ndash;    <h3>pristine: {{ propertyTest.pristine }}</h3>&ndash;&gt;-->
+<!--&lt;!&ndash;    <h3>touched: {{ propertyTest.touched }}</h3>&ndash;&gt;-->
+<!--&lt;!&ndash;    <h3>untouched: {{ propertyTest.untouched }}</h3>&ndash;&gt;-->
+<!--&lt;!&ndash;    <h3>valid: {{ propertyTest.valid }}</h3>&ndash;&gt;-->
+<!--&lt;!&ndash;    <h3>invalid: {{ propertyTest.invalid }}</h3>&ndash;&gt;-->
 
-        <h3>valid: {{ nameField.valid }}</h3>
+<!--        <h3>valid: {{ nameField.valid }}</h3>-->
 
-    <button type="button" class="btn btn-primary" name="singleModel"
-            [(ngModel)]="singleModel" btnCheckbox
-            btnCheckboxTrue="On" btnCheckboxFalse="Off">
-      {{singleModel}}
-    </button>
+<!--    <button type="button" class="btn btn-primary" name="singleModel"-->
+<!--            [(ngModel)]="singleModel" btnCheckbox-->
+<!--            btnCheckboxTrue="On" btnCheckboxFalse="Off">-->
+<!--      {{singleModel}}-->
+<!--    </button>-->
 
+<!--&lt;!&ndash;    <div class="form-group">&ndash;&gt;-->
+<!--&lt;!&ndash;      <label for="startDate">Start Date</label>&ndash;&gt;-->
+<!--&lt;!&ndash;      <input type="text"&ndash;&gt;-->
+<!--&lt;!&ndash;             placeholder="Start Date"&ndash;&gt;-->
+<!--&lt;!&ndash;             class="form-control"&ndash;&gt;-->
+<!--&lt;!&ndash;             [(ngModel)]="startDate" name="startDate" id="startDate"&ndash;&gt;-->
+<!--&lt;!&ndash;             bsDatepicker>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
 <!--    <div class="form-group">-->
 <!--      <label for="startDate">Start Date</label>-->
 <!--      <input type="text"-->
 <!--             placeholder="Start Date"-->
 <!--             class="form-control"-->
 <!--             [(ngModel)]="startDate" name="startDate" id="startDate"-->
-<!--             bsDatepicker>-->
+<!--             bsDaterangepicker>-->
 <!--    </div>-->
-    <div class="form-group">
-      <label for="startDate">Start Date</label>
-      <input type="text"
-             placeholder="Start Date"
-             class="form-control"
-             [(ngModel)]="startDate" name="startDate" id="startDate"
-             bsDaterangepicker>
-    </div>
 
-    Start Date: {{startDate}}
+<!--    Start Date: {{startDate}}-->
 
-    <div class="form-group">
-      <label for="startTime">Start Time</label>
-      <timepicker [(ngModel)]="startTime" name="startTime" id="startTime"></timepicker>
-    </div>
+<!--    <div class="form-group">-->
+<!--      <label for="startTime">Start Time</label>-->
+<!--      <timepicker [(ngModel)]="startTime" name="startTime" id="startTime"></timepicker>-->
+<!--    </div>-->
 
-    Start Time {{startTime}}
+<!--    Start Time {{startTime}}-->
 
-    <div class="form-group">
-      User Rating
-      <rating [(ngModel)]="userRating" [max]="maxRating" [readonly]="isReadonly"
-              name="userRating" id="userRating"
-              [titles]="['one','two','three']"></rating>
-    </div>
-    User Rating: {{userRating}}
+<!--    <div class="form-group">-->
+<!--      User Rating-->
+<!--      <rating [(ngModel)]="userRating" [max]="maxRating" [readonly]="isReadonly"-->
+<!--              name="userRating" id="userRating"-->
+<!--              [titles]="['one','two','three']"></rating>-->
+<!--    </div>-->
+<!--    User Rating: {{userRating}}-->
 
-    <div class="form-check form-group">
-      <input class="form-check-input" type="checkbox" value="" id="emailOffers" name="emailOffers" [(ngModel)]="userSettings.emailOffers">
-      <label class="form-check-label" for="emailOffers">
-        Email Special Offers
-      </label>
-    </div>
+<!--    <div class="form-check form-group">-->
+<!--      <input class="form-check-input" type="checkbox" value="" id="emailOffers" name="emailOffers" [(ngModel)]="userSettings.emailOffers">-->
+<!--      <label class="form-check-label" for="emailOffers">-->
+<!--        Email Special Offers-->
+<!--      </label>-->
+<!--    </div>-->
 
-    <p>User Interface Style</p>
-    <div class="form-group">
+<!--    <p>User Interface Style</p>-->
+<!--    <div class="form-group">-->
 
-      <div class="btn-group">
-        <label class="btn btn-primary" [(ngModel)]="userSettings.interfaceStyle" name="interfaceStyle"
-               btnRadio="Light" tabindex="0" role="button">Light</label>
-        <label class="btn btn-primary" [(ngModel)]="userSettings.interfaceStyle" name="interfaceStyle"
-               btnRadio="Medium" tabindex="0" role="button">Medium</label>
-        <label class="btn btn-primary" [(ngModel)]="userSettings.interfaceStyle" name="interfaceStyle"
-               btnRadio="Dark" tabindex="0" role="button">Dark</label>
-      </div>
-
-<!--      <div class="form-check">-->
-<!--        <input class="form-check-input" type="radio" name="interfaceStyle" id="lightInterface" value="light" checked [(ngModel)]="userSettings.interfaceStyle">-->
-<!--        <label class="form-check-label" for="lightInterface">-->
-<!--          Light-->
-<!--        </label>-->
+<!--      <div class="btn-group">-->
+<!--        <label class="btn btn-primary" [(ngModel)]="userSettings.interfaceStyle" name="interfaceStyle"-->
+<!--               btnRadio="Light" tabindex="0" role="button">Light</label>-->
+<!--        <label class="btn btn-primary" [(ngModel)]="userSettings.interfaceStyle" name="interfaceStyle"-->
+<!--               btnRadio="Medium" tabindex="0" role="button">Medium</label>-->
+<!--        <label class="btn btn-primary" [(ngModel)]="userSettings.interfaceStyle" name="interfaceStyle"-->
+<!--               btnRadio="Dark" tabindex="0" role="button">Dark</label>-->
 <!--      </div>-->
-<!--      <div class="form-check">-->
-<!--        <input class="form-check-input" type="radio" name="interfaceStyle" id="mediumInterface" value="medium" [(ngModel)]="userSettings.interfaceStyle">-->
-<!--        <label class="form-check-label" for="mediumInterface">-->
-<!--          Medium-->
-<!--        </label>-->
-<!--      </div>-->
-<!--      <div class="form-check disabled">-->
-<!--        <input class="form-check-input" type="radio" name="interfaceStyle" id="darkInterface" value="dark" [(ngModel)]="userSettings.interfaceStyle">-->
-<!--        <label class="form-check-label" for="darkInterface">-->
-<!--          Dark-->
-<!--        </label>-->
-<!--      </div>-->
-    </div>
 
-    <div class="form-group">
-      <label for="subscriptionType">Subscription Type</label>
-      <select class="form-control" id="subscriptionType" name="subscriptionType" [(ngModel)]="userSettings.subscriptionType">
-<!--        <option>Monthly</option>-->
-<!--        <option>Annual</option>-->
-<!--        <option>Lifetime</option>-->
-        <option *ngFor="let type of subscriptionTypes | async">
-          {{type}}
-        </option>
-      </select>
-    </div>
+<!--&lt;!&ndash;      <div class="form-check">&ndash;&gt;-->
+<!--&lt;!&ndash;        <input class="form-check-input" type="radio" name="interfaceStyle" id="lightInterface" value="light" checked [(ngModel)]="userSettings.interfaceStyle">&ndash;&gt;-->
+<!--&lt;!&ndash;        <label class="form-check-label" for="lightInterface">&ndash;&gt;-->
+<!--&lt;!&ndash;          Light&ndash;&gt;-->
+<!--&lt;!&ndash;        </label>&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--&lt;!&ndash;      <div class="form-check">&ndash;&gt;-->
+<!--&lt;!&ndash;        <input class="form-check-input" type="radio" name="interfaceStyle" id="mediumInterface" value="medium" [(ngModel)]="userSettings.interfaceStyle">&ndash;&gt;-->
+<!--&lt;!&ndash;        <label class="form-check-label" for="mediumInterface">&ndash;&gt;-->
+<!--&lt;!&ndash;          Medium&ndash;&gt;-->
+<!--&lt;!&ndash;        </label>&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--&lt;!&ndash;      <div class="form-check disabled">&ndash;&gt;-->
+<!--&lt;!&ndash;        <input class="form-check-input" type="radio" name="interfaceStyle" id="darkInterface" value="dark" [(ngModel)]="userSettings.interfaceStyle">&ndash;&gt;-->
+<!--&lt;!&ndash;        <label class="form-check-label" for="darkInterface">&ndash;&gt;-->
+<!--&lt;!&ndash;          Dark&ndash;&gt;-->
+<!--&lt;!&ndash;        </label>&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--    </div>-->
 
-    <div class="form-group">
-      <label for="notes">Notes</label>
-      <textarea class="form-control" id="notes" name="notes" rows="3" [(ngModel)]="userSettings.notes"></textarea>
-    </div>
+<!--    <div class="form-group">-->
+<!--      <label for="subscriptionType">Subscription Type</label>-->
+<!--      <select class="form-control" id="subscriptionType" name="subscriptionType" [(ngModel)]="userSettings.subscriptionType">-->
+<!--&lt;!&ndash;        <option>Monthly</option>&ndash;&gt;-->
+<!--&lt;!&ndash;        <option>Annual</option>&ndash;&gt;-->
+<!--&lt;!&ndash;        <option>Lifetime</option>&ndash;&gt;-->
+<!--        <option *ngFor="let type of subscriptionTypes | async">-->
+<!--          {{type}}-->
+<!--        </option>-->
+<!--      </select>-->
+<!--    </div>-->
 
-    <div [hidden]="!postError"
-         class="alert alert-danger">
-      {{postErrorMessage}}
-    </div>
-    <button class="btn btn-primary">Send</button>
-  </form>
-</div>
+<!--    <div class="form-group">-->
+<!--      <label for="notes">Notes</label>-->
+<!--      <textarea class="form-control" id="notes" name="notes" rows="3" [(ngModel)]="userSettings.notes"></textarea>-->
+<!--    </div>-->
 
-<!--<h3>form: {{form.value | json}}</h3>-->
-<!--<h3>userSettings: {{userSettings | json}}</h3>-->
-<h3>originalUserSettings: {{originalUserSettings | json}}</h3>
+<!--    <div [hidden]="!postError"-->
+<!--         class="alert alert-danger">-->
+<!--      {{postErrorMessage}}-->
+<!--    </div>-->
+<!--    <button class="btn btn-primary">Send</button>-->
+<!--  </form>-->
+<!--</div>-->
+
+<!--&lt;!&ndash;<h3>form: {{form.value | json}}</h3>&ndash;&gt;-->
+<!--&lt;!&ndash;<h3>userSettings: {{userSettings | json}}</h3>&ndash;&gt;-->
+<!--<h3>originalUserSettings: {{originalUserSettings | json}}</h3>-->
