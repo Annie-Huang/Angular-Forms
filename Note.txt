@@ -24,17 +24,33 @@ D:\react\Angular-Forms>git push -u origin master
 D:\react\Angular-Forms>ng g c user-settings-form
 D:\react\Angular-Forms>npm install --save bootstrap
 
-blur
-=========
+blur (tab|mouseClick in and out of the field)
+======================================
 ng-untouched | ng-touched
+
+Ng-untouched and ng-touched, a field starts off with the ng-untouched class,
+and when we visit a field, we may or may not modify it,
+but at some point we're going to blur that field, blur means lose focus. That could mean Tabbing off of the field or hitting the Post button to cause the field to lose focus.
+When that happens, the ng-untouched class is removed, and ng-touched is placed on the field.
+
 
 unmodified
 ==============
 ng-pristine | ng-dirty
 
+We also have a pair of ng-pristine and ng-dirty. A field's value starts off as pristine, and that means unmodified,
+and as soon as you modify that field, ng-pristine is removed and ng-dirty is placed on that field.
+So a class of ng-dirty just means that the field has been modified.
+
 validation
 ================
 ng-valid | ng-invalid
+
+if we're using some kind of attribute for a validation, Angular will know about that,
+and as long as the field is valid, ng-valid will be a class name on that input field.
+If the value is invalid, we get ng-invalid instead.
+
+
 
 -----------
 

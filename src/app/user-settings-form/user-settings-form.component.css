@@ -1,9 +1,11 @@
 
-/*cannot have space between the two classes below*/
+/* Get errors as soon as you tab out of the field and if the field is not valid. */
+/* cannot have space between the '.ng-invalid:not(form)' and '.ng-touched' below*/
 /*.ng-invalid:not(form).ng-touched {*/
 /*  border: 1px solid red;*/
 /*}*/
 
+/* Get errors on submit and if the fields are not valid. */
 .field-error {
   border: 1px solid red;
 }
